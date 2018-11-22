@@ -1,0 +1,80 @@
+        <p style="text-align: center;"><strong>RESUMO</strong></p>
+        <p style="text-align: justify;">&nbsp; Nesta p&aacute;gina ser&aacute; abordado o que &eacute; o VRML, para que serve, e quais os requisitos b&aacute;sicos para utiliz&aacute;-lo. Em seguida ser&atilde;o apresentados alguns experimentos feitos, exemplificados com fotos. Um deles feito com o Google SketchUp.</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: center;"><strong>INTRODU&Ccedil;&Atilde;O</strong></p>
+        <p style="text-align: justify;">&nbsp; De acordo com que o mundo evolui, novas tecnologias v&atilde;o surgindo. Neste meio tempo surgiram a realidade virtual e a modelagem 3D. Com a popularidade destas tecnologias viu-se necess&aacute;rio a cria&ccedil;&atilde;o de um padr&atilde;o de formato para elas. Eis que surge o VRML, um&nbsp;padr&atilde;o de formato de arquivo para realidade virtual, predecessor do famoso X3D.&nbsp;</p>
+        <p style="text-align: justify;">&nbsp; Este trabalho visa abordar o que &eacute; modelagem 3D, o que &eacute; VRML, como ele &eacute; utilizado no mercado de trabalho, e trazer uma experi&ecirc;ncia de modelagem 3D no formato VRML feita com a ferramenta Google SkethUp.</p>
+        <p style="text-align: justify;">&nbsp; A metodologia basea-se em pesquisas em artigos e sites, e a experi&ecirc;ncia tem por base a tentativa e erro at&eacute; chegar ao acerto. Este trabalho est&aacute; dividido em quatro se&ccedil;&otilde;es: a introdu&ccedil;&atilde;o; o desenvolvimento, que aborda a modelagem 3D e VRML e seus subt&oacute;picos; o experimento realizado; e a conclus&atilde;o.&nbsp;</p>
+        <p style="text-align: center;">&nbsp;</p>
+        <p style="text-align: center;"><strong>MODELAGEM 3D&nbsp;</strong></p>
+        <p style="text-align: justify;">&nbsp; Desde o surgimento da interface gr&aacute;fica &eacute; pensado a modelagem 3D como um assunto computacional. Ela &eacute;&nbsp;basicamente o processo de se criar um objeto que contenha, claro, 3 dimens&otilde;es. Para tal s&atilde;o utilizados programas&nbsp;espec&iacute;ficos. &Eacute; poss&iacute;vel simular&nbsp;objetos, cen&aacute;rios e personagens em cenas animadas ou est&aacute;ticas.&nbsp;</p>
+        <p style="text-align: justify;">&nbsp; Ela &eacute; uma tecnologia ampla, e pode ser utilizada desde a &aacute;rea de arquitetura at&eacute; a &aacute;rea de jogos. Ilustra&ccedil;&otilde;es e filmes s&atilde;o as &aacute;reas que mais utilizam a tecnologia. Est&aacute; muito presente no cotidiano de todas as pessoas.</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: center;"><strong>VRML</strong></p>
+        <p style="text-align: justify;">&nbsp;&nbsp;<strong>CONSIDERA&Ccedil;&Otilde;ES INICIAIS</strong></p>
+        <p style="text-align: justify;">&nbsp; O VRML foi criado para ser o padr&atilde;o de formato de arquivo para realidade virtual, utilizado tanto para a Internet como para ambientes desktop. Ele cont&eacute;m nada mais que a descri&ccedil;&atilde;o de um ambiente.</p>
+        <p style="text-align: justify;">&nbsp; &Eacute; importante frizar que&nbsp;&nbsp;VRML n&atilde;o &eacute; uma linguagem puramente de modelagem e nem de realidade virtual:&nbsp;ela tem poucos recursos de modelagem geom&eacute;trica e cont&eacute;m muitas fun&ccedil;&otilde;es que extrapolam as de uma linguagem de modelagem, e n&atilde;o cont&eacute;m imers&atilde;o, ou seja, n&atilde;o &eacute; preciso um &oacute;culos ou outro meio de imers&atilde;o.</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><strong>&nbsp; UTILIZA&Ccedil;&Atilde;O NO MUNDO</strong></p>
+        <p style="text-align: justify;">&nbsp; A utiliza&ccedil;&atilde;o desta linguagem no mundo &eacute; muito clara. Por meio desta linguagem, escrita em modo texto, &eacute; poss&iacute;vel criar objetos tridimensionais podendo definir cor, transpar&ecirc;ncia, brilho, textura, etc.</p>
+        <p style="text-align: left;">&nbsp;</p>
+        <p style="text-align: left;">&nbsp;<strong>&nbsp; A&nbsp; LINGUAGEM VRML</strong></p>
+        <p style="text-align: left;">&nbsp;&nbsp; Abaixo um exemplo de c&oacute;digo retirado do site&nbsp;<a href="http://www.inf.pucrs.br">www.inf.pucrs.br</a>&nbsp;que mostra como &eacute; a linguagem VRML.</p>
+        <p>#VRML V2.0 utf8 <br /># The VRML 2.0 Sourcebook<br /># Copyright (c) 1997<br /># Andrea L. Ames, David R. Nadeau, and John L. Moreland<br /># A brown hut<br />Group {<br />&nbsp; children [<br />&nbsp; &nbsp; # Draw the hut walls<br />&nbsp; &nbsp; &nbsp; Shape {<br />&nbsp; &nbsp; &nbsp; &nbsp; appearance DEF Brown Appearance {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; material Material {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diffuseColor 0.6 0.4 0.0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; geometry Cylinder {<br />&nbsp; &nbsp; &nbsp; &nbsp; height 2.0<br />&nbsp; &nbsp; &nbsp; &nbsp; radius 2.0<br />&nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; },<br />&nbsp; &nbsp; # Draw the hut roof<br />&nbsp; &nbsp; Transform {<br />&nbsp; &nbsp; &nbsp; translation 0.0 2.0 0.0<br />&nbsp; &nbsp; &nbsp; children Shape {<br />&nbsp; &nbsp; &nbsp; &nbsp; appearance USE Brown<br />&nbsp; &nbsp; &nbsp; &nbsp; geometry Cone {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height 2.0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bottomRadius 2.5<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; }<br />&nbsp; ]<br />}</p>
+        <p>&nbsp;</p>
+        <p style="text-align: left;"><strong>&nbsp; REQUISITOS PARA EXECUTAR</strong></p>
+        <p style="text-align: justify;">&nbsp; Para conseguir visualizar os documentos em VRML &eacute; necess&aacute;rio que o navegador tenha instalado um plug-in que tem a fun&ccedil;&atilde;o de ler estes documentos. Existem v&aacute;rios dispon&iacute;veis para os navegadores.</p>
+        <p style="text-align: justify;">&nbsp; Ao criar um documento em VRML, deve-se lembrar de que ele &eacute; dividido em componentes, como os documentos HTML. O principal e o &uacute;nico obrigat&oacute;rio &eacute; o Header. Outros componentes importantes, mas n&atilde;o obrigat&oacute;rios s&atilde;o: Prototypes; Shapes, Interpolators, Sensors, Scripts; e Routes.</p>
+        <p style="text-align: justify;">&nbsp; Mas criar um documento inteiro escrevendo, por se tratar de cria&ccedil;&atilde;o de imagens, pode ser muito demorado e dispendioso. Por isto &eacute; recomendado a utiliza&ccedil;&atilde;o de uma aplica&ccedil;&atilde;o, como o Google SketchUp. Nele &eacute; poss&iacute;vel desenhar um modelo 3d e exportar para VRML, como no experimento realizado abaixo.</p>
+        <p style="text-align: justify;"><strong>&nbsp;</strong>&nbsp;</p>
+        <p style="text-align: justify;"><strong>&nbsp; EXEMPLO REAL DE APLICA&Ccedil;&Atilde;O</strong></p>
+        <p>&nbsp; Leandro Campos e Marcos Ribeiro, em seu trabalho de realidade virtual aplicada a e-commerce, eles propuseram uma plataforma que &eacute; uma proposta de arquitetura para o desenvolvimento de lojas virtuais 3D.&nbsp; Eles utilizam HTML para apresenta&ccedil;&atilde;o do website, a linguagem PHP para escrever os scripts do lado servidor, o banco de dados MySQL, e o VRML como tecnologia de Realidade virtual.</p>
+        <p>&nbsp; Atrav&eacute;s de um navegador de internet com um plug-in para interpretar o VRML, ao acessar o site com o projeto deles &eacute; encontrado uma loja virtual 3D, na qual &eacute; poss&iacute;vel locomover e selecionar objetos utilizando o teclado e o mouse.</p>
+        <p>&nbsp;</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        
+        
+        <p style="text-align: center;"><strong>EXPERIMENTO REALIZADO</strong></p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;">Utilizando a ferramenta Google SketchUp Pro 2018 foi poss&iacute;vel realizar o experimento abaixo descrito. Descreverei passo a passo de como utilizar.</p>
+        <p style="text-align: justify;">Ao iniciar o projeto &eacute; poss&iacute;vel identificar algumas estruturas prontas no canto direito. Utilizaremos a arma&ccedil;&atilde;o de piso para criar um piso.</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><img src="1.JPG" alt="" /></p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;">Voc&ecirc; pode coloca-lo onde e quantos quiser.</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><img src="2.JPG" alt="" /></p>
+        <p style="text-align: justify;">Ap&oacute;s, no experimento, comecei a colocar paredes.</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><img src="3.JPG" alt="" /></p>
+        <p style="text-align: justify;">Dica: utilize o bot&atilde;o do meio do mouse ara girar a c&acirc;mera.</p>
+        <p style="text-align: justify;">Voc&ecirc; vai notar que a parede s&oacute; fica naquele &acirc;ngulo. Pode ser usado esta ferramenta para rotacionar a figura:</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><img src="4.JPG" alt="" /></p>
+        <p style="text-align: justify;">Clique e segure em cima da figura na posi&ccedil;&atilde;o do eixo no qual quer rotacionar. No caso vamos rotacionar no eixo z (azul).</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><img src="5.JPG" alt="" /></p>
+        <p style="text-align: justify;">Arraste at&eacute; a frente que deseja girar, no caso arrastei at&eacute; o eixo y (verde). Note que a linha pontilhada ficou verde na parte de baixo.</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><img src="6.JPG" alt="" /></p>
+        <p style="text-align: justify;">Ent&atilde;o arraste at&eacute; a posi&ccedil;&atilde;o desejada e clique novamente para fixar.</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><img src="7.JPG" alt="" /></p>
+        <p style="text-align: justify;">&nbsp;Clique no objeto utilizando a seta e ent&atilde;o utilize o atalho de copiar (Ctrl+c) para copiar a figura do jeito que est&aacute;, e ent&atilde;o col&aacute;-la (Ctrl+v). Voc&ecirc; tamb&eacute;m pode utilizar a fun&ccedil;&atilde;o de redimensionar:</p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><img src="8.JPG" alt="" /></p>
+        <p style="text-align: justify;">Este &eacute; o b&aacute;sico. Com os objetos prontos e uma boa imagina&ccedil;&atilde;o &eacute; poss&iacute;vel construir um bom modelo. Abaixo, depois de alguns minutos na ferramenta, o resultado final.</p>
+        <p style="text-align: justify;"><img src="9.JPG" alt="" /></p>
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;">Para salvar e poder utilizar como VRML basta clicar em arquivo, coloque o mouse em cima de exportar, e clique em Modelo 3D.</p>
+        <p style="text-align: justify;">&nbsp;<img src="10.JPG" alt="" /></p>
+        <p style="text-align: justify;">Depois escolha um nome, selecione a op&ccedil;&atilde;o arquivo VRML, escolha uma pasta no seu computador para salvar e clique em exportar.</p>
+        <p style="text-align: justify;">&nbsp;<img src="11.JPG" alt="" /></p>
+        
+        <p style="text-align: justify;">&nbsp;</p>
+        <p style="text-align: justify;"><strong>BIBLIOGRAFIA</strong></p>
+        <p>MANSSOUR, Isabel Harb. Introdu&ccedil;&atilde;o &agrave; VRML 2.0. Dispon&iacute;vel em: &lt;www.inf.pucrs.br&gt;.</p>
+        <p>&nbsp;</p>
+        <p>CAMPOS, Leandro Silva, RIBEIRO, Marcos Wagner de Souza. Realidade Virtual Aplicada A E-Commerce: Proposta De Plataforma Baseada Em VRML E PHP.&nbsp; Grupo de Realidade Virtual de Goi&aacute;s &ndash; GRVG - Instituto Luterano de Ensino Superior de Itumbiara Av. Beira Rio, 1001 &ndash; Bairro Nova Aurora, Itumbiara-GO. Dispon&iacute;vel em: &lt;www.lbd.dcc.ufmg.br&gt;.</p>
+        <p>&nbsp;</p>
+        <p>FERRAZ, Ricardo Cerqueira. A Utiliza&ccedil;&atilde;o De Ambientes Virtuais Em Vrml Para A Inform&aacute;tica Na Educa&ccedil;&atilde;o. Vit&oacute;ria da Conquista &ndash; BA, 2010. Dispon&iacute;vel em: &lt;www2.uesb.br&gt;.</p>
